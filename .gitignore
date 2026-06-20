@@ -1,0 +1,32 @@
+# Build
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# .NET
+*.dll
+*.exe
+*.pdb
+*.nupkg
+project.lock.json
+
+# Ambiente
+.env
+appsettings.Development.json
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Docker volumes
+.data/
+
+# Notas de estudo e contexto local
+_claude/
+.claude/contexto/
+
+# OS
+.DS_Store
+Thumbs.db

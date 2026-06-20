@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CRMModular.API/CRMModular.API.csproj" />
+  <Project Path="CRMModular.Application/CRMModular.Application.csproj" />
+  <Project Path="CRMModular.Domain/CRMModular.Domain.csproj" />
+  <Project Path="CRMModular.Infrastructure/CRMModular.Infrastructure.csproj" />
+</Solution>
