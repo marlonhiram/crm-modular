@@ -26,6 +26,7 @@ npm-debug.log
 # Notas de estudo e contexto local
 _claude/
 .claude/contexto/
+crm-frontend/_claude/
 
 # OS
 .DS_Store

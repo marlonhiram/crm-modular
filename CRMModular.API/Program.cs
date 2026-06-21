@@ -28,6 +28,14 @@ builder.Services.AddScoped<LeadApplicationService>();
 builder.Services.AddScoped<ILeadRepository, LeadRepository>();
 builder.Services.AddSingleton<IMessageProducer, RabbitMqProducer>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy.WithOrigins("http://localhost:5173")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+});
+
 var app = builder.Build();
 
 // =========================================================================
@@ -41,6 +49,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowReactApp");
 
 // OBRIGATÓRIO: Diz para o .NET mapear as rotas que criamos dentro das Controllers (ex: api/leads)
 app.MapControllers();

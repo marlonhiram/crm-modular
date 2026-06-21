@@ -42,4 +42,9 @@ public class LeadApplicationService
     {
         return await _leadRepository.GetByIdAsync(id);
     }
+
+    public async Task<IEnumerable<Lead>> GetAllAsync()
+    {
+        return await _leadRepository.GetAllAsync();
+    }
 }

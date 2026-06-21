@@ -25,4 +25,9 @@ public class LeadRepository : ILeadRepository
     {
         return await _dbContext.Leads.FirstOrDefaultAsync(l => l.Id == id);
     }
+
+    public async Task<IEnumerable<Lead>> GetAllAsync()
+    {
+        return await _dbContext.Leads.OrderByDescending(l => l.CreatedAt).ToListAsync();
+    }
 }

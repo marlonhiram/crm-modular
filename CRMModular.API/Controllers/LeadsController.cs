@@ -43,6 +43,13 @@ public class LeadsController : ControllerBase
         }
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var leads = await _leadService.GetAllAsync();
+        return Ok(leads);
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(Guid id)
     {

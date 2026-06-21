@@ -1,8 +1,10 @@
-# CRM Modular B2B — Parte 1: Clean Architecture + Mensageria
+# CRM Modular B2B
 
-> Primeiro projeto de uma série de estudos práticos em desenvolvimento backend com .NET.
+> Projeto de estudo prático em desenvolvimento fullstack — backend .NET + frontend React.
 
-Sistema de CRM modular desenvolvido como projeto de estudo prático de **Clean Architecture** em .NET, com mensageria assíncrona via RabbitMQ e microsserviço de notificações em Node.js.
+Sistema de CRM modular com gerenciamento de Leads, desenvolvido para consolidar conceitos de **Clean Architecture**, mensageria assíncrona e construção de interfaces modernas com React.
+
+**Estágio atual:** Parte 2 em andamento — desenvolvimento do frontend React integrado ao backend.
 
 ---
 
@@ -116,6 +118,26 @@ crm-modular/
 │   └── index.js
 └── docker-compose.yml
 ```
+
+---
+
+## Frontend (Parte 2 — em andamento)
+
+SPA em React integrada ao backend via Axios. Módulo de Leads com listagem, busca, criação e modal de edição/exclusão.
+
+**Stack:** React 19 · Vite · Axios · React Router DOM · Tailwind CSS 4 · lucide-react · react-hot-toast
+
+```bash
+cd crm-frontend
+npm install
+npm run dev
+# Acesse: http://localhost:5173
+```
+
+**Funcionalidades implementadas:**
+- Listagem de Leads com paginação e busca (filtro client-side)
+- Criação de Lead via modal — integrada e funcionando ponta a ponta
+- Modal de edição e exclusão — aguardando `PUT`/`DELETE` no backend
 
 ---
 
